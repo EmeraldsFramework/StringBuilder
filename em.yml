@@ -4,6 +4,7 @@ version: 0.1.0
 dependencies:
   Bool: EmeraldsFramework/Bool
   LinkedList: EmeraldsFramework/LinkedList
+  Vector: EmeraldsFramework/Vector
 
 dev-dependencies:
   cSpec: Oblivious-Oblivious/cSpec
