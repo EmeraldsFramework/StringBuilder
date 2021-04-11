@@ -61,6 +61,10 @@ void string_delete(string *sb) {
     sb->length = 0;
 }
 
+bool string_equals(string *sb, string *other) {
+    return strcmp(string_get(sb), string_get(other)) == 0;
+}
+
 void string_free(string *sb) {
     string_delete(sb);
     free(sb);
