@@ -10,6 +10,8 @@ string *string_new(char *initial_string) {
 }
 
 void string_add(string *sb, const char *str) {
+    if(sb == NULL || str == NULL) return;
+
     linked_list_add(sb->list, (void*)str);
 }
 
@@ -18,6 +20,8 @@ void string_addf(string *sb, const char *f, ...) {
     signed int result = 0;
     char buf[BIG_NUMBA];
     va_list args;
+
+    if(sb == NULL || f == NULL) return;
 
     va_start(args, f);
         result = vsnprintf(buf, sizeof(buf), f, args);
@@ -33,6 +37,8 @@ char *string_get(string *sb) {
     char *c = NULL;
     void *head = NULL;
     struct llnode **probe = NULL;
+
+    if(sb == NULL) return NULL;
 
     buf = (char*)malloc(sizeof(char) * (sb->length + 1));
     if(buf == NULL) return NULL;
@@ -65,10 +71,14 @@ void string_delete(string *sb) {
 }
 
 bool string_equals(string *sb, string *other) {
+    if(sb == NULL || other == NULL) return false;
+
     return strcmp(string_get(sb), string_get(other)) == 0;
 }
 
 void string_free(string *sb) {
+    if(sb == NULL) return;
+
     string_delete(sb);
     free(sb);
 }
