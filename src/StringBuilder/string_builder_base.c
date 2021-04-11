@@ -57,6 +57,9 @@ char *string_get(string *sb) {
 }
 
 void string_delete(string *sb) {
+    if(sb == NULL) return;
+    if(sb->list == NULL) return;
+
     linked_list_free(sb->list);
     sb->length = 0;
 }
