@@ -1,0 +1,13 @@
+name: StringBuilder
+version: 0.1.0
+
+dependencies:
+  Bool: EmeraldsFramework/Bool
+  LinkedList: EmeraldsFramework/LinkedList
+
+dev-dependencies:
+  cSpec: Oblivious-Oblivious/cSpec
+
+build: #
+
+license: GPLv3
