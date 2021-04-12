@@ -6,7 +6,6 @@ vector *string_split(string *sb, string *delimeter) {
     char *token = NULL;
     char *delim_p = NULL;
     vector *str_tokens = vector_new();
-    string *token_str = string_new("");
 
     /* Iterate through the chars constructing a string and
 		reseting the value once we find the delimeter */
