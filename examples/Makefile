@@ -1,7 +1,7 @@
 NAME = test
 
 CC = clang
-OPT = -O2 -g
+OPT = -O2
 VERSION = -std=c89
 OUTPUT = a.out
 
